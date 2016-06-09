@@ -1735,8 +1735,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dong JyaSuin";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dong JyaSuin";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dong JyaSuin (7BV4XWYUNV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dong JyaSuin (7BV4XWYUNV)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1746,7 +1746,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "07fb35b3-94eb-400a-a6e4-f8be806b4eac";
+				PROVISIONING_PROFILE = "926f0441-57a7-44bb-8035-d79cc5509320";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1755,8 +1755,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dong JyaSuin";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dong JyaSuin";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dong JyaSuin (7BV4XWYUNV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dong JyaSuin (7BV4XWYUNV)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1766,7 +1766,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "07fb35b3-94eb-400a-a6e4-f8be806b4eac";
+				PROVISIONING_PROFILE = "926f0441-57a7-44bb-8035-d79cc5509320";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

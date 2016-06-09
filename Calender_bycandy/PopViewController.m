@@ -12,6 +12,13 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+typedef enum
+{
+    PhotoType_Album = 0,
+    PhotoType_Camera
+} PhotoType;
+
+
 @interface PopViewController ()<UIPickerViewDelegate,UIPickerViewDataSource,AVAudioPlayerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>{
     
     NSArray *pushDateArray,*pushDateMinusTimeArray;
@@ -27,7 +34,6 @@
     int count;
     
     //相簿代碼
-    int AlubmNumber;
     __block NSString *url;
 }
 @property (weak, nonatomic) IBOutlet UIButton *pushTimeBtn;
@@ -494,63 +500,42 @@
     }
 }
 
-//拍照
--(IBAction)photoBtnAction:(id)sender {
-    
-    if (CameraExists == 1) {
-        UIActionSheet *photoactionsheet = [[UIActionSheet alloc] initWithTitle:@"請選擇"
-                                                                      delegate:self
-                                                             cancelButtonTitle:@"取消"
-                                                        destructiveButtonTitle:nil
-                                                             otherButtonTitles:@"相簿",@"相機", nil];
-        [photoactionsheet showInView:self.view];
-    }else if (CameraExists == 0) {
-        
-        UIActionSheet *photoactionsheet = [[UIActionSheet alloc] initWithTitle:@"請選擇"
-                                                                      delegate:self
-                                                             cancelButtonTitle:@"取消"
-                                                        destructiveButtonTitle:nil
-                                                             otherButtonTitles:@"相簿", nil];
-        [photoactionsheet showInView:self.view];
-        
-    }
+// 拍照
+- (IBAction)photoBtnAction:(id)sender
+{
+    [self checkUseAlbumOrCamera];
 }
 
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+- (void)checkUseAlbumOrCamera
+{
+    UIAlertController *albumOrCameraAlert = [[UIAlertController alloc] init];
     
-    if (CameraExists == 0) {
-        
-        if (buttonIndex == 0) {
-            //相簿
-            [self Type:0];
-            AlubmNumber = 0;
-        }
-        
-    }else if (CameraExists == 1){
-        
-        if (buttonIndex == 0) {
-            
-            //相簿
-            [self Type:0];
-            AlubmNumber = 0;
-            
-        }else if (buttonIndex == 1){
-            
-            //相機
-            [self Type:1];
-            AlubmNumber = 1;
-            
-        }
+    UIAlertAction *albumAction = [UIAlertAction actionWithTitle:@"相簿" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //
+        [self setPhotoType:PhotoType_Album];
+    }];
+    
+    UIAlertAction *cameraAction = [UIAlertAction actionWithTitle:@"相機" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //
+        [self setPhotoType:PhotoType_Camera];
+    }];
+    
+    if (CameraExists == 1)
+    {
+        [albumOrCameraAlert addAction:cameraAction];
     }
+    [albumOrCameraAlert addAction:albumAction];    
+    
+    [self presentViewController:albumOrCameraAlert animated:YES completion:nil];
 }
 
--(void)Type:(int)AlbumOrCamera{
+-(void)setPhotoType:(PhotoType)type{
     
     //AlbumOrCamera 0為相簿 1為相機
     self.photo = [[UIImagePickerController alloc] init];
     
-    if (AlbumOrCamera == 0) {
-        
+    if (type == PhotoType_Album)
+    {
         self.photo.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         self.photo.delegate = self;
         
@@ -560,8 +545,9 @@
         
         photoLoad = 1;
         
-    }else if(AlbumOrCamera == 1){
-        
+    }
+    else if (type == PhotoType_Camera)
+    {
         //判斷是否有支援相機 不支援的話就跳出Alert
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO){
             
@@ -575,8 +561,9 @@
             CameraExists = 0;
             
             return;
-        }else {
-            
+        }
+        else
+        {
             self.photo.sourceType = UIImagePickerControllerSourceTypeCamera;
             self.photo.cameraDevice = UIImagePickerControllerCameraDeviceRear;  //選擇後置鏡頭
             self.photo.mediaTypes = [NSArray arrayWithObjects:@"public.image", nil];
