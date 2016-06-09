@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F4963FFF98BFB466106501B4B01BC660C42AB7C0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F4963FFF98BFB466106501B4B01BC660C42AB7C0" : 0,
+    "6EEB4A750FBC6729CBAEB07FD4D5D860E01B106B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7CF4C843-0DFA-4927-8038-8B8EB7D688AE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F4963FFF98BFB466106501B4B01BC660C42AB7C0" : "CandyCalendar\/",
+    "6EEB4A750FBC6729CBAEB07FD4D5D860E01B106B" : "SweetCandyCalendar"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Calender_bycandy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Calender_bycandy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/218.161.48.105\/volume2\/GitSever\/CandyCalendar_Src",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6EEB4A750FBC6729CBAEB07FD4D5D860E01B106B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/suindong\/CandyCalendar_Src.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F4963FFF98BFB466106501B4B01BC660C42AB7C0"
+    }
+  ]
+}
