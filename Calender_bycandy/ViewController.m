@@ -95,7 +95,7 @@ static char btnTmpKey;
     if (![fileManager fileExistsAtPath:settingPlistPath]) {
         NSMutableDictionary *tmpSettingDict = [NSMutableDictionary new];
         //如果第一次開app建立setting.plist檔
-        tmpSettingDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Sunday",@"weekBeginDay",@"YES",@"picVisiable",@"YES",@"pushNotification",@"fiveDay",@"weekDayNumber",@"8",@"weekBeginTime",@"10",@"classNumber",@"basicType",@"themeType", nil];
+        tmpSettingDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Sunday",@"weekBeginDay",@"YES",@"picVisiable",@"YES",@"pushNotification",@"fiveDay",@"weekDayNumber",@"8",@"weekBeginTime",@"10",@"classNumber",@"LOVELY",@"themeType", nil];
         [tmpSettingDict writeToFile:settingPlistPath atomically:YES];
         [myDB sharedInstance].settingDict = tmpSettingDict;
     }else{
