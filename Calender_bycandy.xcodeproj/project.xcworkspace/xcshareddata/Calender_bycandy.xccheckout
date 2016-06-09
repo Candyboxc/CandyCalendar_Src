@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7CF4C843-0DFA-4927-8038-8B8EB7D688AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Calender_bycandy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6EEB4A750FBC6729CBAEB07FD4D5D860E01B106B</key>
+		<string>ssh://218.161.48.105/volume2/GitSever/CandyCalendar_Src</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Calender_bycandy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6EEB4A750FBC6729CBAEB07FD4D5D860E01B106B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://218.161.48.105/volume2/GitSever/CandyCalendar_Src</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6EEB4A750FBC6729CBAEB07FD4D5D860E01B106B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6EEB4A750FBC6729CBAEB07FD4D5D860E01B106B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SweetCandyCalendar</string>
+		</dict>
+	</array>
+</dict>
+</plist>
