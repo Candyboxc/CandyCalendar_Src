@@ -4,5 +4,5 @@ use_frameworks!
 target 'Calender_bycandy' do
     project 'Calender_bycandy'
     pod 'Firebase'
-
+    pod 'Firebase/Crash'
 end

@@ -1375,8 +1375,8 @@ static char btnTmpKey;
     [self normalStampSetting:sender];
 }
 
-- (IBAction)stampBtnClick5:(id)sender {
-    
+- (IBAction)stampBtnClick5:(id)sender
+{
     [self buttonSelectedTransform:sender];
     
     imagePackage = [NSMutableArray new];

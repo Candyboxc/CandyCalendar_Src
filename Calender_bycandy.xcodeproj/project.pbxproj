@@ -1276,6 +1276,7 @@
 				3690E7DF1AC5860B00CE7158 /* Resources */,
 				A55D09BE4C4E088B6B659541 /* [CP] Embed Pods Frameworks */,
 				C441D0237899F6CD5B1D9966 /* [CP] Copy Pods Resources */,
+				F549D1231D1EF4C200205B3C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1674,6 +1675,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calender_bycandy/Pods-Calender_bycandy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F549D1231D1EF4C200205B3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Replace this path with the path to the key you just downloaded\nJSON_FILE=/Users/Dong/Documents/MyProject/SweetCandyCalendar-dbe3f702bb42.json\n\n# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:157847325211:ios:2a2e035ea1d90444\n\ndefaults write com.google.SymbolUpload version -integer 1   # creates file if it does not exist\nJSON=$(cat \"${JSON_FILE}\")\n/usr/bin/plutil -replace \"app_${GOOGLE_APP_ID//:/_}\" -json \"${JSON}\" \"$HOME/Library/Preferences/com.google.SymbolUpload.plist\"\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym";
 		};
 /* End PBXShellScriptBuildPhase section */
 
