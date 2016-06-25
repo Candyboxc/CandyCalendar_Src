@@ -1145,10 +1145,6 @@
         
         _trashCan.hidden = YES;
     }
-    else
-    {
-        _trashCan.hidden = NO;
-    }
 }
 
 
