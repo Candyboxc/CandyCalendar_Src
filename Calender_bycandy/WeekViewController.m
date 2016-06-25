@@ -1126,13 +1126,13 @@
 
 - (void)addTrashCan
 {
-    UIView *tmpBgView = [[UIView alloc] initWithFrame:_stampCollectionView.frame];
-    tmpBgView.backgroundColor = _stampCollectionView.backgroundColor;
-    [self.view addSubview:tmpBgView];
-    [self.view bringSubviewToFront:_stampCollectionView];
-    
     if (_trashCan == nil)
     {
+        UIView *tmpBgView = [[UIView alloc] initWithFrame:_stampCollectionView.frame];
+        tmpBgView.backgroundColor = _stampCollectionView.backgroundColor;
+        [self.view addSubview:tmpBgView];
+        [self.view bringSubviewToFront:_stampCollectionView];
+        
         CGFloat width = _stamp5.frame.size.width;
         
         CGRect rect = CGRectMake(0, 0, width, width);
