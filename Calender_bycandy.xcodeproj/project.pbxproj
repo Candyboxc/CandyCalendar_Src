@@ -271,6 +271,9 @@
 		F545ECA41B3AC3B60034C77B /* 5013.png in Resources */ = {isa = PBXBuildFile; fileRef = F545ECA01B3AC3B60034C77B /* 5013.png */; };
 		F545ECA51B3AC3B60034C77B /* 5012.png in Resources */ = {isa = PBXBuildFile; fileRef = F545ECA11B3AC3B60034C77B /* 5012.png */; };
 		F56917D11B284C97002EEE81 /* PopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F56917D01B284C97002EEE81 /* PopTableViewController.m */; };
+		F58D3FC81D1ED6D50079E95C /* CustomStampFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D3FC41D1ED6D50079E95C /* CustomStampFilter.m */; };
+		F58D3FC91D1ED6D50079E95C /* trashcan.png in Resources */ = {isa = PBXBuildFile; fileRef = F58D3FC51D1ED6D50079E95C /* trashcan.png */; };
+		F58D3FCA1D1ED6D50079E95C /* TrashCanButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D3FC71D1ED6D50079E95C /* TrashCanButton.m */; };
 		F59481791B32CF9C00BDAC32 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = F59481771B32CF9C00BDAC32 /* left.png */; };
 		F594817A1B32CF9C00BDAC32 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = F59481781B32CF9C00BDAC32 /* right.png */; };
 		F5A201831AD1233B00EB97DD /* PicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A201821AD1233B00EB97DD /* PicButton.m */; };
@@ -610,6 +613,11 @@
 		F545ECA11B3AC3B60034C77B /* 5012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5012.png; sourceTree = "<group>"; };
 		F56917CF1B284C97002EEE81 /* PopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTableViewController.h; sourceTree = "<group>"; };
 		F56917D01B284C97002EEE81 /* PopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableViewController.m; sourceTree = "<group>"; };
+		F58D3FC31D1ED6D50079E95C /* CustomStampFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomStampFilter.h; sourceTree = "<group>"; };
+		F58D3FC41D1ED6D50079E95C /* CustomStampFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomStampFilter.m; sourceTree = "<group>"; };
+		F58D3FC51D1ED6D50079E95C /* trashcan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trashcan.png; sourceTree = "<group>"; };
+		F58D3FC61D1ED6D50079E95C /* TrashCanButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrashCanButton.h; sourceTree = "<group>"; };
+		F58D3FC71D1ED6D50079E95C /* TrashCanButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrashCanButton.m; sourceTree = "<group>"; };
 		F59481771B32CF9C00BDAC32 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		F59481781B32CF9C00BDAC32 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		F5A201811AD1233B00EB97DD /* PicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicButton.h; sourceTree = "<group>"; };
@@ -832,6 +840,11 @@
 				363E08FF1B2497FC00DF9D30 /* CustomStamp.m */,
 				36CE299B1B40F7B300968575 /* CustomLoading.h */,
 				36CE299C1B40F7B300968575 /* CustomLoading.m */,
+				F58D3FC31D1ED6D50079E95C /* CustomStampFilter.h */,
+				F58D3FC41D1ED6D50079E95C /* CustomStampFilter.m */,
+				F58D3FC51D1ED6D50079E95C /* trashcan.png */,
+				F58D3FC61D1ED6D50079E95C /* TrashCanButton.h */,
+				F58D3FC71D1ED6D50079E95C /* TrashCanButton.m */,
 				362C34781B2D6DCF005EE814 /* PopoverImage */,
 				F5A356311B2A8019006A35A7 /* ClassImage */,
 				363E09131B24A1A600DF9D30 /* CustomStampUnderImage */,
@@ -1392,6 +1405,7 @@
 				36F820E51B32DFB000BB2774 /* 2004.png in Resources */,
 				36F820E31B32DFB000BB2774 /* 2002.png in Resources */,
 				F5D967511B315AB1005C2803 /* button_自訂貼圖.png in Resources */,
+				F58D3FC91D1ED6D50079E95C /* trashcan.png in Resources */,
 				36892D8A1B34802600FE7409 /* Mouse_day.png in Resources */,
 				8EB601041B425D91003430FC /* 天使_頭部.png in Resources */,
 				36892D871B34802600FE7409 /* Mouse_background.png in Resources */,
@@ -1593,8 +1607,10 @@
 				3690E7ED1AC5860B00CE7158 /* ViewController.m in Sources */,
 				363E09001B2497FC00DF9D30 /* CustomStamp.m in Sources */,
 				EFCD43D71B1D852E00DB80AF /* TotalSettingTableViewController.m in Sources */,
+				F58D3FC81D1ED6D50079E95C /* CustomStampFilter.m in Sources */,
 				F51A94A11B1D56AD00A5D1D2 /* WeekViewController.m in Sources */,
 				F506CEDF1B2567320017DC8F /* PopViewController.m in Sources */,
+				F58D3FCA1D1ED6D50079E95C /* TrashCanButton.m in Sources */,
 				F5E945391B315F620034DA7A /* ThemeViewController.m in Sources */,
 				EFF2AFEB1B28C10F0033ECAA /* OtherTableViewController.m in Sources */,
 				F525EB231B0B3C4D00C9D738 /* UIView+WhenTappedBlocks.m in Sources */,

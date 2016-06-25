@@ -15,6 +15,10 @@
 #import "PopTableViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "CustomStampFilter.h"
+#import "TrashCanButton.h"
+
+
 static char btnInfoKey;
 static char btnTmpKey;
 
@@ -61,6 +65,8 @@ static char btnTmpKey;
 
 //播放錄音
 @property (strong, nonatomic) AVAudioPlayer *voicePlayer;
+
+@property (strong, nonatomic) TrashCanButton *trashCan;
 
 
 @end
@@ -165,6 +171,13 @@ static char btnTmpKey;
     //[bannerView_ loadRequest:[self createTestRequest]];  //測試
     
     [self.view addSubview:bannerView_];
+    
+    UIView *tmpBgView = [[UIView alloc] initWithFrame:_stampCollectionView.frame];
+    tmpBgView.backgroundColor = _stampCollectionView.backgroundColor;
+    [self.view addSubview:tmpBgView];
+    [self.view bringSubviewToFront:_stampCollectionView];
+    
+    [self addTrashCan];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -236,14 +249,33 @@ static char btnTmpKey;
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"stampcell" forIndexPath:indexPath];
     if ([[cell.contentView.subviews firstObject] isKindOfClass:[PicButton class]]) {
         picButton = (PicButton *)[cell viewWithTag:106];
-        if (customStampTypeSelected){
+        if (customStampTypeSelected)
+        {
+            
+            CGRect picCollectionFrame = _stampCollectionView.frame;
+            if (picCollectionFrame.size.width >= self.view.frame.size.width)
+            {
+                picCollectionFrame.size.width = (self.view.frame.size.width + 8) - _stamp1.frame.size.width*1.3;
+                _stampCollectionView.frame = picCollectionFrame;
+            }
+            
             picButton.delegate = self;
             NSString* path = [stamptargetdir stringByAppendingPathComponent:
                               [myDB sharedInstance].customStampArray[indexPath.row]];
             
             [picButton setImage:[UIImage imageWithContentsOfFile:path] forState:UIControlStateNormal];
             picButton.code = [myDB sharedInstance].customStampArray[indexPath.row];
-        }else {//如果目前是貼圖選擇
+        }
+        else
+        {//如果目前是貼圖選擇
+            
+            CGRect picCollectionFrame = _stampCollectionView.frame;
+            if (picCollectionFrame.size.width != self.view.frame.size.width + 8)
+            {
+                picCollectionFrame.size.width = self.view.frame.size.width + 8;
+                _stampCollectionView.frame = picCollectionFrame;
+            }
+            
             picButton.delegate = self;
             [picButton setImage:[UIImage imageNamed:imagePackage[indexPath.row]] forState:UIControlStateNormal];
             picButton.code = imagePackage[indexPath.row];
@@ -287,6 +319,15 @@ static char btnTmpKey;
 - (void)buttonMove:(PicButton *)pic location:(CGPoint)loc{
     picButton2.frame = CGRectMake(loc.x, loc.y-50, picButton2.frame.size.width, picButton2.frame.size.height);
     
+    if (CGRectIntersectsRect(CGRectMake(picButton2.center.x, picButton2.center.y, 0, 0), _trashCan.frame))
+    {
+        [_trashCan hoverIn];
+    }
+    else
+    {
+        [_trashCan hoverOut];
+    }
+    
     for (UITableViewCell *cell in [_myTable visibleCells]) {
         CGRect frame = [_myTable convertRect:cell.frame toView:self.view];
         if (CGRectIntersectsRect(CGRectMake(picButton2.center.x, picButton2.center.y, 0, 0), frame)) {
@@ -297,7 +338,25 @@ static char btnTmpKey;
     }
 }
 
-- (void)buttonEnd:(PicButton *)pic location:(CGPoint)loc{
+- (void)buttonEnd:(PicButton *)pic location:(CGPoint)loc
+{
+    if (CGRectIntersectsRect(CGRectMake(picButton2.center.x, picButton2.center.y, 0, 0), _trashCan.frame))
+    {
+        [_trashCan hoverOut];
+        
+        [CustomStampFilter removeStamp:pic.code completionHandler:^(BOOL needReload) {
+            //
+            if (needReload)
+            {
+                [_stampCollectionView reloadData];
+            }
+        }];
+    }
+    else
+    {
+        [_trashCan hoverOut];
+    }
+    
     for (UITableViewCell *cell in [_myTable visibleCells]) {
         CGRect frame = [_myTable convertRect:cell.frame toView:self.view];
         if (CGRectIntersectsRect(CGRectMake(picButton2.center.x, picButton2.center.y, 0, 0), self.myTable.frame) && CGRectIntersectsRect(CGRectMake(picButton2.center.x, picButton2.center.y, 0, 0), frame)) {
@@ -1254,43 +1313,48 @@ static char btnTmpKey;
     for (int i = 2000; i<=2022; i++) {
         [imagePackage addObject:[NSString stringWithFormat:@"%d.png",i]];
     }
-    customStampTypeSelected = NO;
-    [self.stampCollectionView reloadData];
-    [self buttonSelectedTransform:sender];
+    [self normalStampSetting:sender];
 }
 - (IBAction)stampBtnClick2:(id)sender {
     imagePackage = [NSMutableArray new];
     for (int i = 3000; i<=3015; i++) {
         [imagePackage addObject:[NSString stringWithFormat:@"%d.png",i]];
     }
-    customStampTypeSelected = NO;
-    [self.stampCollectionView reloadData];
-    [self buttonSelectedTransform:sender];
+    [self normalStampSetting:sender];
 }
 - (IBAction)stampBtnClick3:(id)sender {
     imagePackage = [NSMutableArray new];
     for (int i = 4000; i<=4014; i++) {
         [imagePackage addObject:[NSString stringWithFormat:@"%d.png",i]];
     }
-    customStampTypeSelected = NO;
-    [self.stampCollectionView reloadData];
-    [self buttonSelectedTransform:sender];
+    [self normalStampSetting:sender];
 }
 - (IBAction)stampBtnClick4:(id)sender {
     imagePackage = [NSMutableArray new];
     for (int i = 5000; i<=5015; i++) {
         [imagePackage addObject:[NSString stringWithFormat:@"%d.png",i]];
     }
-    customStampTypeSelected = NO;
-    [self.stampCollectionView reloadData];
-    [self buttonSelectedTransform:sender];
+    [self normalStampSetting:sender];
 }
-- (IBAction)stampBtnClick5:(id)sender {
+- (IBAction)stampBtnClick5:(id)sender
+{
+    [self buttonSelectedTransform:sender];
+    
     imagePackage = [NSMutableArray new];
     imagePackage = [myDB sharedInstance].customStampArray;
     customStampTypeSelected = YES;
     [self.stampCollectionView reloadData];
-    [self buttonSelectedTransform:sender];
+    
+    _trashCan.hidden = NO;
+}
+
+- (void)normalStampSetting:(id)nomalStampButton
+{
+    customStampTypeSelected = NO;
+    [self.stampCollectionView reloadData];
+    [self buttonSelectedTransform:nomalStampButton];
+    
+    _trashCan.hidden = YES;
 }
 
 -(void)buttonSelectedTransform:(UIButton *)sender{
@@ -1355,6 +1419,28 @@ static char btnTmpKey;
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"CustomLoading" bundle:nil];
     id targetVC = [storyBoard instantiateViewControllerWithIdentifier:@"CustomLoading"];
     [self presentViewController:targetVC animated:true completion:nil];
+}
+
+- (void)addTrashCan
+{
+    if (_trashCan == nil)
+    {
+        CGFloat width = _stamp5.frame.size.width;
+        
+        CGRect rect = CGRectMake(0, 0, width, width);
+        
+        _trashCan = [[TrashCanButton alloc] initWithFrame:rect];
+        
+        _trashCan.center = CGPointMake(self.view.frame.size.width - width/2, _stampCollectionView.frame.origin.y + _stampCollectionView.frame.size.height/2);
+        
+        [self.view addSubview:_trashCan];
+        
+        _trashCan.hidden = YES;
+    }
+    else
+    {
+        _trashCan.hidden = NO;
+    }
 }
 
 @end

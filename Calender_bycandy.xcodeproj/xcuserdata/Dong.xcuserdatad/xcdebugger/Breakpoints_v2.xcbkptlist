@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calender_bycandy/ViewController.m"
-            timestampString = "471869471.056687"
+            timestampString = "488561896.896623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1603"
-            endingLineNumber = "1603"
-            landmarkName = "-config"
+            startingLineNumber = "1607"
+            endingLineNumber = "1607"
+            landmarkName = "-setAD"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calender_bycandy/ViewController.m"
-            timestampString = "471868562.325469"
+            timestampString = "488561896.896623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1129"
-            endingLineNumber = "1129"
-            landmarkName = "-calendarCreate:getmonth:"
+            startingLineNumber = "1133"
+            endingLineNumber = "1133"
+            landmarkName = "-textViewDidEndEditing:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
