@@ -139,24 +139,22 @@
     }
     
     // 指定廣告單元編號。
-    bannerView_.adUnitID = @"ca-app-pub-7172905197509417/4036443485";
+    bannerView_.adUnitID = @"ca-app-pub-7556127145229222/1403677991";
     
     // 通知執行階段，將使用者帶往廣告到達網頁後，該恢復哪一個 UIViewController，
     // 並將其加入檢視階層中。
     bannerView_.rootViewController = self;
     
+    GADRequest *gadRequest = [GADRequest request];
+    
+    gadRequest.testDevices = @[kGADSimulatorID,@"6dfe062fe11f7bc378aa9f92c86f54f7"];
     
     // 啟動一般請求，隨著廣告一起載入。
-    [bannerView_ loadRequest:[GADRequest request]];   //實際
-    //[bannerView_ loadRequest:[self createTestRequest]];  //測試
+    [bannerView_ loadRequest:gadRequest];   //實際
     
-    //NSLog(@"height: %f",self.view.frame.size.height);
     //4s:480   //5:568    //6:736
     [self.view addSubview:bannerView_];
     
-    
-    
-    //NSArray *allArray = [[myDB sharedInstance]queryAvatar];
     headArray = [[myDB sharedInstance]queryAvatarWithPart:@"1"];
     faceArray = [[myDB sharedInstance]queryAvatarWithPart:@"2"];
     dressArray = [[myDB sharedInstance]queryAvatarWithPart:@"3"];

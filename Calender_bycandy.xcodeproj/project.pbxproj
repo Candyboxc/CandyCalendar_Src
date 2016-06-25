@@ -163,7 +163,6 @@
 		8E2E0D221B162C8C00BCE049 /* myDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2E0D211B162C8C00BCE049 /* myDB.m */; };
 		8E2E0D261B162D2E00BCE049 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2E0D251B162D2E00BCE049 /* libsqlite3.dylib */; };
 		8E59670A1B21971000B7E621 /* mycalendarDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8E5967091B21971000B7E621 /* mycalendarDB.sqlite */; };
-		8E8B1C4E1B297BD7003D2682 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8B1C4C1B297BD7003D2682 /* GoogleMobileAds.framework */; };
 		8E8B1C4F1B297BD7003D2682 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E8B1C4D1B297BD7003D2682 /* README.txt */; };
 		8E8B1C511B297C24003D2682 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8B1C501B297C24003D2682 /* AdSupport.framework */; };
 		8E8B1C531B297C2B003D2682 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8B1C521B297C2B003D2682 /* AudioToolbox.framework */; };
@@ -224,6 +223,7 @@
 		8ED7F6711B16AE4A00602BEB /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7F6691B16AE4A00602BEB /* FMDatabasePool.m */; };
 		8ED7F6721B16AE4A00602BEB /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7F66B1B16AE4A00602BEB /* FMDatabaseQueue.m */; };
 		8ED7F6731B16AE4A00602BEB /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7F66E1B16AE4A00602BEB /* FMResultSet.m */; };
+		EE92E87658EFE363DFFE9959 /* Pods_Calender_bycandy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608243F4BE8618DD7DE7C103 /* Pods_Calender_bycandy.framework */; };
 		EF7F51561B2EED2800525A53 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7F51551B2EED2800525A53 /* Setting.storyboard */; };
 		EFCD43D71B1D852E00DB80AF /* TotalSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCD43D21B1D852E00DB80AF /* TotalSettingTableViewController.m */; };
 		EFCD43D81B1D852E00DB80AF /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCD43D41B1D852E00DB80AF /* SettingTableViewController.m */; };
@@ -310,6 +310,8 @@
 		F5F123641B31D3D5005A04C4 /* customstamp_stamp7.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F123601B31D3D5005A04C4 /* customstamp_stamp7.png */; };
 		F5F123651B31D3D5005A04C4 /* customstamp_stamp6.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F123611B31D3D5005A04C4 /* customstamp_stamp6.png */; };
 		F5F123671B31DB75005A04C4 /* customstamp_stamp8.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F123661B31DB75005A04C4 /* customstamp_stamp8.png */; };
+		F5FB87AE1D1EDEC100FEA178 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5FB87AD1D1EDEC100FEA178 /* GoogleService-Info.plist */; };
+		F5FB88141D1EE56800FEA178 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FB88131D1EE56800FEA178 /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -323,6 +325,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B45DD74F79125D803C4C433 /* Pods-Calender_bycandy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calender_bycandy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calender_bycandy/Pods-Calender_bycandy.release.xcconfig"; sourceTree = "<group>"; };
 		362C34791B2D6DEF005EE814 /* popover_voice_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popover_voice_play.png; sourceTree = "<group>"; };
 		36384ECA1B20513F00013F5E /* Screen_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen_top.png; sourceTree = "<group>"; };
 		36384ED01B20772100013F5E /* Loading_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading_1.png; sourceTree = "<group>"; };
@@ -486,11 +489,11 @@
 		36F820F41B32EB1E00BB2774 /* 3008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3008.png; sourceTree = "<group>"; };
 		36F820F51B32EB1E00BB2774 /* 3009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3009.png; sourceTree = "<group>"; };
 		36F820F61B32EB1E00BB2774 /* 3010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3010.png; sourceTree = "<group>"; };
+		608243F4BE8618DD7DE7C103 /* Pods_Calender_bycandy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calender_bycandy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2E0D201B162C8C00BCE049 /* myDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myDB.h; sourceTree = "<group>"; };
 		8E2E0D211B162C8C00BCE049 /* myDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myDB.m; sourceTree = "<group>"; };
 		8E2E0D251B162D2E00BCE049 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		8E5967091B21971000B7E621 /* mycalendarDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mycalendarDB.sqlite; sourceTree = "<group>"; };
-		8E8B1C4C1B297BD7003D2682 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		8E8B1C4D1B297BD7003D2682 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		8E8B1C501B297C24003D2682 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		8E8B1C521B297C2B003D2682 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -557,6 +560,7 @@
 		8ED7F66C1B16AE4A00602BEB /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		8ED7F66D1B16AE4A00602BEB /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		8ED7F66E1B16AE4A00602BEB /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A08CA1AF543922FCB26F38B6 /* Pods-Calender_bycandy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calender_bycandy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calender_bycandy/Pods-Calender_bycandy.debug.xcconfig"; sourceTree = "<group>"; };
 		EF7F51551B2EED2800525A53 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		EFCD43D11B1D852E00DB80AF /* TotalSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalSettingTableViewController.h; sourceTree = "<group>"; };
 		EFCD43D21B1D852E00DB80AF /* TotalSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalSettingTableViewController.m; sourceTree = "<group>"; };
@@ -656,6 +660,8 @@
 		F5F123601B31D3D5005A04C4 /* customstamp_stamp7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customstamp_stamp7.png; sourceTree = "<group>"; };
 		F5F123611B31D3D5005A04C4 /* customstamp_stamp6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customstamp_stamp6.png; sourceTree = "<group>"; };
 		F5F123661B31DB75005A04C4 /* customstamp_stamp8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customstamp_stamp8.png; sourceTree = "<group>"; };
+		F5FB87AD1D1EDEC100FEA178 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F5FB88131D1EE56800FEA178 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -673,9 +679,10 @@
 				8E8B1C551B297C32003D2682 /* AVFoundation.framework in Frameworks */,
 				8E8B1C531B297C2B003D2682 /* AudioToolbox.framework in Frameworks */,
 				8E8B1C511B297C24003D2682 /* AdSupport.framework in Frameworks */,
-				8E8B1C4E1B297BD7003D2682 /* GoogleMobileAds.framework in Frameworks */,
 				8E2E0D261B162D2E00BCE049 /* libsqlite3.dylib in Frameworks */,
 				F5A86F311AD273F300486211 /* QuartzCore.framework in Frameworks */,
+				F5FB88141D1EE56800FEA178 /* GoogleMobileAds.framework in Frameworks */,
+				EE92E87658EFE363DFFE9959 /* Pods_Calender_bycandy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,7 +807,6 @@
 				8E8B1C541B297C32003D2682 /* AVFoundation.framework */,
 				8E8B1C521B297C2B003D2682 /* AudioToolbox.framework */,
 				8E8B1C501B297C24003D2682 /* AdSupport.framework */,
-				8E8B1C4C1B297BD7003D2682 /* GoogleMobileAds.framework */,
 				8E8B1C4D1B297BD7003D2682 /* README.txt */,
 				8E5967091B21971000B7E621 /* mycalendarDB.sqlite */,
 				8ED7F6631B16AE4A00602BEB /* fmdb */,
@@ -809,6 +815,8 @@
 				3690E7E31AC5860B00CE7158 /* Calender_bycandy */,
 				3690E7FD1AC5860B00CE7158 /* Calender_bycandyTests */,
 				3690E7E21AC5860B00CE7158 /* Products */,
+				4CAA11C20F70A37D3F439348 /* Pods */,
+				50B24DC496819A17BCF0FF6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -824,6 +832,7 @@
 		3690E7E31AC5860B00CE7158 /* Calender_bycandy */ = {
 			isa = PBXGroup;
 			children = (
+				F5FB87AD1D1EDEC100FEA178 /* GoogleService-Info.plist */,
 				3690E7E81AC5860B00CE7158 /* AppDelegate.h */,
 				3690E7E91AC5860B00CE7158 /* AppDelegate.m */,
 				3690E7EB1AC5860B00CE7158 /* ViewController.h */,
@@ -1046,6 +1055,24 @@
 			name = Image3000;
 			sourceTree = "<group>";
 		};
+		4CAA11C20F70A37D3F439348 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A08CA1AF543922FCB26F38B6 /* Pods-Calender_bycandy.debug.xcconfig */,
+				2B45DD74F79125D803C4C433 /* Pods-Calender_bycandy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		50B24DC496819A17BCF0FF6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5FB88131D1EE56800FEA178 /* GoogleMobileAds.framework */,
+				608243F4BE8618DD7DE7C103 /* Pods_Calender_bycandy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8EB600B61B413696003430FC /* customwear */ = {
 			isa = PBXGroup;
 			children = (
@@ -1243,9 +1270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3690E8041AC5860B00CE7158 /* Build configuration list for PBXNativeTarget "Calender_bycandy" */;
 			buildPhases = (
+				68C70B05E1C809EDC12931F4 /* [CP] Check Pods Manifest.lock */,
 				3690E7DD1AC5860B00CE7158 /* Sources */,
 				3690E7DE1AC5860B00CE7158 /* Frameworks */,
 				3690E7DF1AC5860B00CE7158 /* Resources */,
+				A55D09BE4C4E088B6B659541 /* [CP] Embed Pods Frameworks */,
+				C441D0237899F6CD5B1D9966 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1439,6 +1469,7 @@
 				F53F61891B3467C5001D491A /* transparent2.png in Resources */,
 				36983EA91B1EDF87000B50F0 /* popover_save.png in Resources */,
 				36548C821B32BB8300D00A7D /* 5002.png in Resources */,
+				F5FB87AE1D1EDEC100FEA178 /* GoogleService-Info.plist in Resources */,
 				36548C851B32BB8300D00A7D /* 5005.png in Resources */,
 				F50E4A141B2EAE45007024C0 /* 1001.png in Resources */,
 				36AB6B241B333557003C7A13 /* 4007.png in Resources */,
@@ -1598,6 +1629,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68C70B05E1C809EDC12931F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A55D09BE4C4E088B6B659541 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calender_bycandy/Pods-Calender_bycandy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C441D0237899F6CD5B1D9966 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calender_bycandy/Pods-Calender_bycandy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3690E7DD1AC5860B00CE7158 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1749,6 +1828,7 @@
 		};
 		3690E8051AC5860B00CE7158 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A08CA1AF543922FCB26F38B6 /* Pods-Calender_bycandy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1769,6 +1849,7 @@
 		};
 		3690E8061AC5860B00CE7158 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B45DD74F79125D803C4C433 /* Pods-Calender_bycandy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

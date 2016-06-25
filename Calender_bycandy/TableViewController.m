@@ -160,24 +160,19 @@ static char btnTmpKey;
         
     }
     
-    bannerView_.adUnitID = @"ca-app-pub-7172905197509417/4036443485";// 指定廣告單元編號
+    bannerView_.adUnitID = @"ca-app-pub-7556127145229222/1403677991";// 指定廣告單元編號
     
     /* 通知執行階段,將使用者帶往廣告到達頁面後,該恢復哪個UIViewController 並將其加入檢視階層中*/
     bannerView_.rootViewController = self;
     
+    GADRequest *gadRequest = [GADRequest request];
+    
+    gadRequest.testDevices = @[kGADSimulatorID,@"6dfe062fe11f7bc378aa9f92c86f54f7"];
     
     // 啟動一般請求，隨著廣告一起載入。
-    [bannerView_ loadRequest:[GADRequest request]];   //實際
-    //[bannerView_ loadRequest:[self createTestRequest]];  //測試
+    [bannerView_ loadRequest:gadRequest];   //實際
     
     [self.view addSubview:bannerView_];
-    
-    UIView *tmpBgView = [[UIView alloc] initWithFrame:_stampCollectionView.frame];
-    tmpBgView.backgroundColor = _stampCollectionView.backgroundColor;
-    [self.view addSubview:tmpBgView];
-    [self.view bringSubviewToFront:_stampCollectionView];
-    
-    [self addTrashCan];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -204,6 +199,8 @@ static char btnTmpKey;
     if (customStampTypeSelected) {
         [_stampCollectionView reloadData];
     }
+    
+    [self addTrashCan];
 }
 
 
@@ -1425,6 +1422,11 @@ static char btnTmpKey;
 {
     if (_trashCan == nil)
     {
+        UIView *tmpBgView = [[UIView alloc] initWithFrame:_stampCollectionView.frame];
+        tmpBgView.backgroundColor = _stampCollectionView.backgroundColor;
+        [self.view addSubview:tmpBgView];
+        [self.view bringSubviewToFront:_stampCollectionView];
+        
         CGFloat width = _stamp5.frame.size.width;
         
         CGRect rect = CGRectMake(0, 0, width, width);
@@ -1436,10 +1438,6 @@ static char btnTmpKey;
         [self.view addSubview:_trashCan];
         
         _trashCan.hidden = YES;
-    }
-    else
-    {
-        _trashCan.hidden = NO;
     }
 }
 

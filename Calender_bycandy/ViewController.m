@@ -101,7 +101,7 @@ static char btnTmpKey;
     if (![fileManager fileExistsAtPath:settingPlistPath]) {
         NSMutableDictionary *tmpSettingDict = [NSMutableDictionary new];
         //如果第一次開app建立setting.plist檔
-        tmpSettingDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Sunday",@"weekBeginDay",@"YES",@"picVisiable",@"YES",@"pushNotification",@"fiveDay",@"weekDayNumber",@"8",@"weekBeginTime",@"10",@"classNumber",@"basicType",@"themeType", nil];
+        tmpSettingDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Sunday",@"weekBeginDay",@"YES",@"picVisiable",@"YES",@"pushNotification",@"fiveDay",@"weekDayNumber",@"8",@"weekBeginTime",@"10",@"classNumber",@"LOVELY",@"themeType", nil];
         [tmpSettingDict writeToFile:settingPlistPath atomically:YES];
         [myDB sharedInstance].settingDict = tmpSettingDict;
     }else{
@@ -1592,36 +1592,43 @@ static char btnTmpKey;
     //在畫面下方建立標準廣告大小的畫面。  //4s:480   //5:568    //6:736
     //GAD_SIZE_320x50 就是你的bannerView的size 其中320就是寬度(width), 50就是高度(height)
     
+    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    
     if(self.view.frame.size.height < 500){
         
-        bannerView_ = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0,
+        bannerView_.frame = CGRectMake(0.0,
                                                                       self.view.frame.size.height - GAD_SIZE_320x50.height + 10,
                                                                       self.view.frame.size.width,
-                                                                      GAD_SIZE_320x50.height)];
+                                                                      GAD_SIZE_320x50.height);
         
     }else if (self.view.frame.size.height > 500 && self.view.frame.size.height < 700 ){
         
-        bannerView_ = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0,
+        bannerView_.frame = CGRectMake(0.0,
                                                                       self.view.frame.size.height - GAD_SIZE_320x50.height + 5,
                                                                       self.view.frame.size.width,
-                                                                      GAD_SIZE_320x50.height)];
+                                                                      GAD_SIZE_320x50.height);
         
     }else if (self.view.frame.size.height > 700){
         
-        bannerView_ = [[GADBannerView alloc] initWithFrame:CGRectMake(0.0,
+        bannerView_.frame = CGRectMake(0.0,
                                                                       self.view.frame.size.height - GAD_SIZE_320x50.height,
                                                                       self.view.frame.size.width,
-                                                                      GAD_SIZE_320x50.height)];
+                                                                      GAD_SIZE_320x50.height);
     }
     
-    bannerView_.adUnitID = @"ca-app-pub-7172905197509417/4036443485";  //指定廣告單元編號。
+    bannerView_.adUnitID = @"ca-app-pub-7556127145229222/1403677991";  //指定廣告單元編號。
     
     /* 通知執行階段,將使用者帶往廣告到達頁面後,該恢復哪個UIViewController 並將其加入檢視階層中*/
     bannerView_.rootViewController = self;
     
+    GADRequest *gadRequest = [GADRequest request];
+    
+    gadRequest.testDevices = @[kGADSimulatorID,@"6dfe062fe11f7bc378aa9f92c86f54f7"];
     
     // 啟動一般請求，隨著廣告一起載入。
-    [bannerView_ loadRequest:[GADRequest request]];   //實際
+    [bannerView_ loadRequest:gadRequest];   //實際
+    
+    
     //[bannerView_ loadRequest:[self createTestRequest]];  //測試
     
     //NSLog(@"height: %f",self.view.frame.size.height);

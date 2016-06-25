@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "myDB.h"
 #import <objc/runtime.h>
+@import Firebase;
+
 
 @interface AppDelegate (){
     
@@ -64,6 +66,9 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [FIRApp configure];
+    
     // Override point for customization after application launch.
     [self CopyDBtoDocumentIfNeeded];
     
