@@ -953,14 +953,11 @@
         
         UITextField *inputTextField = alert.textFields[0];
         
-        if(inputTextField.text == nil)
-        {
-        }
-        else
+        if(inputTextField.text.length > 0)
         {
             [self takeClassStamp:inputTextField.text];
         }
-        
+                
         [alert dismissViewControllerAnimated:YES completion:nil];
         
     }];
